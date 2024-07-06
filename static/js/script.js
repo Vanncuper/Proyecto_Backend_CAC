@@ -17,3 +17,13 @@ btncalcularimc.addEventListener('click', function() {
 });
 
 
+function mostrar() {
+    var elemento = document.getElementById('noesta');
+    if (elemento.style.display === 'block') {
+        elemento.style.display = 'none';
+    } else {
+        elemento.style.display = 'block';
+    }
+}
+
+

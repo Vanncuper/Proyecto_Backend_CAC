@@ -1,4 +1,4 @@
-const BASEURL = 'acentor.pythonanywhere.com';
+const BASEURL = 'http://127.0.0.1:5000';
 
 /**
  * @param {string} url
@@ -55,11 +55,10 @@ async function saveevento(){
 
     
   let result = null;
-  // Si hay un idEvento, realiza una petición PUT para actualizar la película existente
   if(idEvento!==""){
     result = await fetchData(`${BASEURL}/api/evento/${idEvento}`, 'PUT', eventoData);
   }else{
-    // Si no hay idEvento, realiza una petición POST para crear una nueva película
+
     result = await fetchData(`${BASEURL}/api/evento/`, 'POST', eventoData);
   }
   
@@ -74,11 +73,6 @@ async function saveevento(){
   showevento();
 }
 
-
-/**
- * Funcion que permite crear un elemento <tr> para la tabla de peliculas
- * por medio del uso de template string de JS.
- */
 async function showevento(){
   let evento =  await fetchData(BASEURL+'/api/evento/', 'GET');
   const tableevento = document.querySelector('#list-table-evento tbody');

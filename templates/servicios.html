@@ -8,7 +8,7 @@
       type="image/x-icon"
       href="../static/img/favicon/favicon-16x16.png"
     />
-    <title>HALLCROSS - Servicios</title>
+    <title>HALLCROSS - Servicios y Eventos</title>
     <link rel="stylesheet" href="../static/css/style.css" />
   </head>
 
@@ -38,7 +38,7 @@
             Bienvenidos a HALLCROSS: ¡Entrena, diviértete y desconéctate!
             Especialmente diseñad@ para vos, busca lo diferente!...
           </p>
-          <a href="#" class="btn-1">informacion</a>
+          <a href="../index.html" class="btn-1">Inicio</a>
         </div>
       </div>
     </header>
@@ -95,28 +95,34 @@
             <p class="description">
                 ¡No te lo pierdas! Únete a nosotros para vivir experiencias llenas de diversión, aprendizaje y competencia saludable que te motivarán a superar tus límites. Sé uno de nosotros, sé HALL!!!
             </p>
-            <form action="#" id="form-evento">
-                <div class="form-group">
-                    <div class="form-control">
-                        <label for="titulo">Nombre del Evento</label>
-                        <input type="text" class="input-search" name="titulo" id="titulo" />
-                    </div>
-                    <div class="form-control">
-                        <label for="fecha">Fecha</label>
-                        <input type="date" class="input-search" name="day" id="fecha" />
-                    </div>
-                    <div class="form-control">
-                        <label for="descripcion">Descripción</label>
-                        <textarea class="input-search" name="descripcion" id="descripcion"></textarea>
-                    </div>
-                    <div class="form-control d-flex-column">
-                      <label  for="imagen">imagen</label>
-                      <input title="imagen" type="url" class="input-search" name="imagen" id="imagen">
-                  </div> 
-                  <input type="hidden"  name="id" id="id-evento">               
-                    <button class="btn-submit" type="button" id="btn-save-evento">Agregar Evento</button>
-                </div>
-            </form>
+            
+            <button id="boton" onclick="mostrar();">Crear Un Evento</button>
+    <div id="crear">
+      <div id="noesta">
+        <form action="#" id="form-evento">
+          <div class="form-group">
+              <div class="form-control">
+                  <label for="titulo">Nombre del Evento</label>
+                  <input type="text" class="input-search" name="titulo" id="titulo" />
+              </div>
+              <div class="form-control">
+                  <label for="fecha">Fecha</label>
+                  <input type="date" class="input-search" name="day" id="fecha" />
+              </div>
+              <div class="form-control">
+                  <label for="descripcion">Descripción</label>
+                  <textarea class="input-search" name="descripcion" id="descripcion" rows="6"></textarea>
+              </div>
+              <div class="form-control d-flex-column">
+                <label  for="imagen">imagen</label>
+                <input title="imagen" type="url" class="input-search" name="imagen" id="imagen">
+            </div> 
+            <input type="hidden"  name="id" id="id-evento">               
+              <button class="btn-submit" type="button" id="btn-save-evento">Agregar Evento</button>
+          </div>
+      </form>
+      </div>
+    </div>
         </section>
 
 
@@ -138,10 +144,6 @@
           </table>
       </section>  
     </main>
-
-
-
-
 
 
     <footer class="footer">
@@ -179,6 +181,7 @@
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="../static/js/crud-evento-fetch.js"></script>
+    <script src="../static/js/script.js"></script>
     
   </body>
 </html>

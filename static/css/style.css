@@ -1,9 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;500;600;700;800&display=swap');
 
-/*
-font-family: 'Bebas Neue', sans-serif;
-font-family: 'Poppins', sans-serif;
-*/
+
 
 h1 {
     color: whitesmoke;
@@ -131,16 +128,30 @@ p {
 }
 
 .btn-1 {
+    font-size: 14px;
+    border: none;
+    border-radius: 4px;
     display: inline-block;
     padding: 11px 35px;
     color: #ffffff;
     text-transform: uppercase;
+    cursor: pointer;
+    margin: 10px;
     background: linear-gradient(
         90deg,
         rgba(245,99,72,1) 0%,
-        rgba(254,140,32,1) 100%
-    );
+        rgba(250,140,32,1) 100%
+);  
+    
 }
+
+.btn-1:hover {
+    background: linear-gradient(
+        90deg,
+        rgba(245,140,32,1) 0%,
+        rgba(240,99,72,1) 100%
+);  
+ }
 
 .about {
     padding: 100px 0;
@@ -183,7 +194,7 @@ hr {
 
 .about-img img {
     border-radius: 15px;
-    filter: brightness(0.4);
+    
 }
 
 .testimonial {
@@ -613,23 +624,26 @@ form label, form legend{
 }
 
 #form .btn-submit {
-    display: inline-block;
-    padding: 11px 35px;
-    color: #191a1f;
-    text-transform: uppercase;
-    background: linear-gradient(
-        90deg,
-        rgba(245, 99, 72, 1) 0%,
-        rgba(254, 140, 32, 1) 100%
-    );
+    font-size: 14px;
     border: none;
     border-radius: 4px;
+    display: inline-block;
+    padding: 11px 35px;
+    color: #ffffff;
     cursor: pointer;
-    font-size: 14px;
+    text-transform: uppercase;
+    background: linear-gradient(
+            90deg,
+            rgba(245,99,72,1) 0%,
+            rgba(254,140,32,1) 100%
+    );   
 }
 
 #form .btn-submit:hover {
-    background-color: #ff6347; 
+    background: linear-gradient(
+        90deg,
+        rgba(245,140,32,1) 0%,
+        rgba(240,99,72,1) 100%) 
  }
 
 #list {
@@ -680,17 +694,26 @@ form label, form legend{
 }
   
 #list .btn-cac {
-    padding: 8px 12px;
     font-size: 14px;
-    color: #191a1f;
-    background-color: #f6071f;
     border: none;
-    border-radius: 4px;
     cursor: pointer;
+    border-radius: 4px;
+    display: inline-block;
+    padding: 11px 35px;
+    color: #ffffff;
+    text-transform: uppercase;
+    background: linear-gradient(
+            90deg,
+            rgba(245,99,72,1) 0%,
+            rgba(254,140,32,1) 100%
+    );   
 }
   
 #list .btn-cac:hover {
-    background-color:#c82333;
+    background: linear-gradient(
+        90deg,
+        rgba(245,140,32,1) 0%,
+        rgba(240,99,72,1) 100%)
 }
 #list .titulo-above-table {
     color: #ffffff;
@@ -709,4 +732,35 @@ textarea {
     border: 1px solid #ccc;
     border-radius: 3px;
     box-sizing: border-box;
+    font-size: x-large;
 }
+
+#noesta {
+    display: none;
+}
+
+#boton {
+    font-size: 14px;
+    border: none;
+    border-radius: 4px;
+    display: inline-block;
+    padding: 11px 35px;
+    color: #ffffff;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin: 10px;
+    background: linear-gradient(
+        90deg,
+        rgba(245,99,72,1) 0%,
+        rgba(250,140,32,1) 100%
+);  
+    
+}
+
+#boton:hover {
+    background: linear-gradient(
+        90deg,
+        rgba(245,140,32,1) 0%,
+        rgba(240,99,72,1) 100%
+);  
+ }
