@@ -4,7 +4,7 @@ Proyecto para CAC Python
 
 ## Pasos para su correcto funcionamiento ##
 
-- Se debe generar un entrono virtual en la carpeta Entorno de modo local.
+- Se debe generar un entrono virtual en la carpeta **Entorno** de modo local.
 
 - Se debe hacer las instalación de los paquetes requeridos, encontrados en el archivo **requirements.txt**.
 
