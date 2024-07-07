@@ -86,7 +86,7 @@ async function showevento(){
                   <td>${evento.fecha}</td>
                   <td>${evento.descripcion}</td>
                   <td>
-                      <img src="${evento.imagen}" width="30%">
+                      <img src="${evento.imagen}" width="90%">
                   </td>
                   <td>
                       <button class="btn-1" onclick='updateevento(${evento.id_evento})'>Actualizar</button>
