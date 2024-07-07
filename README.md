@@ -8,7 +8,7 @@ Backend alojado en "https://render.com/" desde el repositorio "https://github.co
 
 Base de Datos alojada en "https://www.freesqldatabase.com/"
 
-Puede interactuar con el frontend en la dirección (con las limitaciones del servidor gratuito):
+Puede interactuar con el frontend en la siguiente dirección (con las limitaciones del servidor gratuito):
 
 :computer: **[https://acentor.github.io/Proyecto_Backend_CAC/](https://acentor.github.io/Proyecto_Backend_CAC/ "enlace de muestra").** :computer:
 
