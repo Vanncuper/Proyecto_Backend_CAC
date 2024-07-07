@@ -403,7 +403,7 @@ input {
 
 .footer-content {
     display: flex;
-    justify-content: space-between;
+    justify-content:space-around;
 }
 
 .link h3 {
