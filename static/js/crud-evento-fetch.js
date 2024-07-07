@@ -8,11 +8,11 @@ const BASEURL = 'http://127.0.0.1:5000';
  */
 async function fetchData(url, method, data = null) {
   const options = {
-      method: method,
-      headers: {
-          'Content-Type': 'application/json',
-      },
-      body: data ? JSON.stringify(data) : null, 
+    method: method,
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: data ? JSON.stringify(data) : null,
   };
   try {
     const response = await fetch(url, options);
@@ -27,49 +27,52 @@ async function fetchData(url, method, data = null) {
 }
 
 /**
- * @returns 
+ * @returns
  */
-async function saveevento(){
+async function saveevento() {
   const idEvento = document.querySelector('#id-evento').value;
   const titulo = document.querySelector('#titulo').value;
   const fecha = document.querySelector('#fecha').value;
   const descripcion = document.querySelector('#descripcion').value;
   const imagen = document.querySelector('#imagen').value;
 
-  if (!titulo || !fecha || !descripcion  || !imagen) {
+  const fechaActual = new Date();
+  const fechaIngresada = new Date(fecha);
+
+  if (fechaIngresada <= fechaActual) {
     Swal.fire({
-        titulo: 'Error!',
-        text: 'Por favor completa todos los campos.',
-        icon: 'error',
-        confirmButtonText: 'Cerrar'
+      title: 'Error!',
+      text: 'La fecha debe ser posterior a la fecha actual.',
+      icon: 'error',
+      confirmButtonText: 'Cerrar',
     });
     return;
   }
-  
+
   const eventoData = {
-      titulo: titulo,
-      fecha: fecha,
-      descripcion: descripcion,
-      imagen: imagen,
+    titulo: titulo,
+    fecha: fecha,
+    descripcion: descripcion,
+    imagen: imagen,
   };
 
-    
   let result = null;
-  if(idEvento!==""){
+  if (idEvento !== '') {
     result = await fetchData(`${BASEURL}/api/evento/${idEvento}`, 'PUT', eventoData);
-  }else{
-
+  } else {
     result = await fetchData(`${BASEURL}/api/evento/`, 'POST', eventoData);
   }
-  
+
   const formevento = document.querySelector('#form-evento');
   formevento.reset();
+
   Swal.fire({
-    titulo: 'Exito!',
+    title: 'Éxito!',
     text: result.message,
     icon: 'success',
-    confirmButtonText: 'Cerrar'
-  })
+    confirmButtonText: 'Cerrar',
+  });
+
   showevento();
 }
 
@@ -95,13 +98,11 @@ async function showevento(){
 }
   
 /**
- * Function que permite eliminar una pelicula del array del localstorage
- * de acuedo al indice del mismo
- * @param {number} id posición del array que se va a eliminar
+ * @param {number} id
  */
 function deleteevento(id){
   Swal.fire({
-      titulo: "Esta seguro de eliminar la pelicula?",
+      titulo: "Esta seguro de eliminar el evento?",
       showCancelButton: true,
       confirmButtonText: "Eliminar",
   }).then(async (result) => {
@@ -116,12 +117,10 @@ function deleteevento(id){
 
 
 /**
- * Function que permite cargar el formulario con los datos de la pelicula 
- * para su edición
- * @param {number} id Id de la pelicula que se quiere editar
+ * @param {number} id
  */
 async function updateevento(id){
-  //Buscamos en el servidor la pelicula de acuerdo al id
+
   let response = await fetchData(`${BASEURL}/api/evento/${id}`, 'GET');
   const idEvento = document.querySelector('#id-evento');
   const titulo = document.querySelector('#titulo');
@@ -136,11 +135,9 @@ async function updateevento(id){
   imagen.value = response.imagen;
 }
   
-// Escuchar el evento 'DOMContentLoaded' que se dispara cuando el 
-// contenido del DOM ha sido completamente cargado y parseado.
 document.addEventListener('DOMContentLoaded',function(){
   const btnSaveevento = document.querySelector('#btn-save-evento');
-  //ASOCIAR UNA FUNCION AL EVENTO CLICK DEL BOTON
+
   btnSaveevento.addEventListener('click',saveevento);
   showevento();
 });
