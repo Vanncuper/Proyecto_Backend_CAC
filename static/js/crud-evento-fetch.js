@@ -49,6 +49,16 @@ async function saveevento() {
     return;
   }
 
+  if (!title || !director || !releaseDate || !banner) {
+    Swal.fire({
+        title: 'Error!',
+        text: 'Por favor completa todos los campos.',
+        icon: 'error',
+        confirmButtonText: 'Cerrar'
+    });
+    return;
+  }
+
   const eventoData = {
     titulo: titulo,
     fecha: fecha,
