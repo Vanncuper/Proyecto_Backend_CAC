@@ -47,14 +47,12 @@ async function saveevento() {
       confirmButtonText: 'Cerrar',
     });
     return;
-  }
-
-  if (!titulo || !fecha || !descripcion || !imagen) {
+  } else if (!titulo || !fecha || !descripcion || !imagen) {
     Swal.fire({
-        title: 'Error!',
-        text: 'Por favor completa todos los campos.',
-        icon: 'error',
-        confirmButtonText: 'Cerrar'
+      title: 'Error!',
+      text: 'Por favor completa todos los campos.',
+      icon: 'error',
+      confirmButtonText: 'Cerrar'
     });
     return;
   }
