@@ -201,9 +201,14 @@ p {
     background-color: #191a1f;
 }
 
-.footer-content {
-    display: flex;
-    justify-content: space-between;
+.footer {
+    padding: 100px 0;
+    background-color: #191a1f;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    border-style: solid;
+    border-width: 5px;
+    border-color: #258980;
 }
 
 .link h3 {
