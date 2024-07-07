@@ -29,9 +29,9 @@ class Evento:
     def get_all():
         db = get_db()
         cursor = db.cursor()
-        cursor.execute("SELECT * FROM evento")
+        cursor.execute("SELECT * FROM evento WHERE fecha > CURRENT_DATE ORDER BY fecha ASC")
         rows = cursor.fetchall()
-        evento = [Evento(id_evento=row[0], titulo=row[1],  fecha=row[2], descripcion=row[3], imagen=row[4]) for row in rows]
+        evento = [Evento(id_evento=row[0], titulo=row[1], fecha=row[2], descripcion=row[3], imagen=row[4]) for row in rows]
         cursor.close()
         return evento
 
