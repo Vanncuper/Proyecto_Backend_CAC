@@ -49,7 +49,7 @@ async function saveevento() {
     return;
   }
 
-  if (!title || !director || !releaseDate || !banner) {
+  if (!titulo || !fecha || !descripcion || !imagen) {
     Swal.fire({
         title: 'Error!',
         text: 'Por favor completa todos los campos.',
