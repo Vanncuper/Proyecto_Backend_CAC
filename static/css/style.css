@@ -346,7 +346,7 @@ input {
     border-width: 10px;
     border-style: solid;
     border-color: #258980;
-    box-shadow: 0 4px 8px 0 rgba(120, 120, 120, 0.5);
+    box-shadow: 0 4px 8px 0 rgba(120, 120, 120, 0.3);
 }
 
 .blog {
