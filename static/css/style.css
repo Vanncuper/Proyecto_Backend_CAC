@@ -773,4 +773,9 @@ textarea {
 .foti {
     font-family: 'Bebas Neue', sans-serif;
     text-decoration: none;
+    color: #ffffff;
+}
+
+.foti:hover {
+    color: #258980;
 }
