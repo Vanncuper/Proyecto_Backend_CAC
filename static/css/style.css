@@ -769,3 +769,7 @@ textarea {
         rgba(240,99,72,1) 100%
 );  
  }
+
+.foti {
+    font-family: 'Poppins', sans-serif;
+}
