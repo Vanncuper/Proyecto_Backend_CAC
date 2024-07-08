@@ -1,4 +1,4 @@
-const BASEURL = 'https://prueba-jqvf.onrender.com';
+aconst BASEURL = 'https://prueba-jqvf.onrender.com';
 
 /**
  * @param {string} url
