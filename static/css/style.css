@@ -343,9 +343,10 @@ input {
 }
 
 .product-img {
-     border-width: 10px;
-     border-style: solid;
-     border-color: #258980;
+    border-width: 10px;
+    border-style: solid;
+    border-color: #258980;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
 }
 
 .blog {
