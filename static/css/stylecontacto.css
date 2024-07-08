@@ -228,3 +228,8 @@ p {
 .link a:hover {
     color: #258980;
 }
+
+.foti {
+    font-family: 'Bebas Neue', sans-serif;
+    text-decoration: none;
+}
